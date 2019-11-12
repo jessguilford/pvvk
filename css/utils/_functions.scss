@@ -1,0 +1,9 @@
+$browser-context: 16;
+
+@function rem-calc($pixels, $context: 16) {
+  @return #{$pixels/$context}rem;
+}
+
+@function em-calc($pixels, $context) {
+  @return #{$pixels/$context}em;
+}

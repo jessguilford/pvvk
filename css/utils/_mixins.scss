@@ -1,0 +1,63 @@
+@mixin button {
+  color: $white;
+  font-family: $open-sans;
+  font-weight: 700;
+  font-size: rem-calc(16);
+  line-height: em-calc(24,16);
+  margin-top: em-calc(12,16);
+  margin-bottom: em-calc(12,16);
+  margin-left: em-calc(12,16);
+  margin-right: em-calc(12,16);
+  padding: 19px 15px;
+  min-width: 180px;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 2px;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @include sm {
+    font-size: rem-calc(18);
+    margin-top: em-calc(24,18);
+    margin-bottom: em-calc(24,18);
+  }
+}
+
+// https://davidwalsh.name/write-media-queries-sass
+@mixin xxs {
+  @media (max-width: #{$xss-width}) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: #{$sm-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$xl-width}) {
+    @content;
+  }
+}

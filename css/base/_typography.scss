@@ -1,0 +1,107 @@
+body {
+  font-size: 16px;
+}
+
+h1, .h1 {
+  color: $white;
+  font-family: $roboto-cd;
+  font-weight: 400;
+  font-size: rem-calc(36);
+  line-height: em-calc(44,36);
+
+  @include sm {
+    font-size: rem-calc(72);
+    line-height: em-calc(64,72);
+  }
+}
+
+h2, .h2 {
+  // used for secondary headlines, if any
+  color: $grey;
+  font-family: $roboto-cd;
+  font-weight: 400;
+  font-size: rem-calc(32);
+  line-height: em-calc(48,32);
+
+  @include sm {
+    font-size: rem-calc(48);
+    line-height: em-calc(32,48);
+  }
+}
+
+h3, .h3 {
+  // used for artist name links
+  color: $white;
+  font-family: $roboto-cd;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: rem-calc(24);
+  line-height: em-calc(28,24);
+  @include sm {
+    font-size: rem-calc(28);
+    line-height: em-calc(32,28);
+  }
+}
+
+h4, .h4 {
+  // used for artist card titles
+  color: $grey;
+  font-family: $roboto-cd;
+  font-weight: 400;
+  font-size: rem-calc(28);
+  line-height: em-calc(32,28);
+  @include sm {
+    font-size: rem-calc(32);
+    line-height: em-calc(48,32);
+  }
+}
+
+h5, .h5 {
+  color: $grey;
+  font-family: $roboto-cd;
+  font-weight: 400;
+  font-size: rem-calc(16);
+  line-height: em-calc(24,16);
+  margin-top: em-calc(24,20);
+  margin-bottom: em-calc(24,20);
+
+  @include sm {
+    font-size: rem-calc(20);
+    line-height: em-calc(30,20);
+  }
+}
+
+h6, .h6 {
+  color: $grey;
+  font-family: $roboto-cd;
+  font-weight: 400;
+  font-size: rem-calc(18);
+  line-height: em-calc(24,18);
+}
+
+p {
+  color: $grey;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: rem-calc(16);
+  line-height: em-calc(24,16);
+
+  &.sm {
+    font-size: rem-calc(14);
+    line-height: em-calc(22,14);
+  }
+
+  &.xs {
+    font-size: rem-calc(12);
+    line-height: em-calc(18,12);
+  }
+}
+
+p.quote {
+  // used for large quote callouts
+  color: $grey;
+  font-family: $roboto-cd;
+  font-weight: 300;
+  font-size: rem-calc(24);
+  line-height: em-calc(32,24);
+}
