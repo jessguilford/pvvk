@@ -46,33 +46,50 @@
       <!-- End Hero -->
 
       <!-- Artist Card -->
-      <section class="row artist-card">
+      <section class="artist-card">
         <div class="jump" id="gabriel"></div>
         <div class="container d-flex flex-wrap content">
-          <div class="col-12 col-md-12 artist-card__title">
-            <h4>Gabriel Taylor</h4>
+          <div class="row">
+            <div class="col-12 col-md-12 no-padding artist-card__title">
+              <h4>Gabriel Taylor</h4>
+            </div>
           </div>
-          <div class="col-12 col-md-2 artist-card__menu">
-            <ul>
-              <li><a href="">2019</a></li>
-              <li><a href="">2018</a></li>
-              <li><a href="">2017</a></li>
-            </ul>
+          <div class="row">
+            <div class="col-12 col-md-2 artist-card__menu">
+              <ul>
+                <li><a href="" class="selected">2019</a></li>
+                <li><a href="">2018</a></li>
+                <li><a href="">2017</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-10 artist-card__gallery">
+              <figure class="thumbnail">
+              </figure>
+              <figure class="thumbnail">
+              </figure>
+              <figure class="thumbnail">
+              </figure>
+            </div>
           </div>
-          <div class="col-12 col-md-10 artist-card__gallery">
-            <figure class="thumbnail">
-            </figure>
-            <figure class="thumbnail">
-            </figure>
-            <figure class="thumbnail">
-            </figure>
+          <div class="row artist-card__blurb">
+            <div class="col-12 col-md-7 offset-md-3">
+              <p class="quote text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
           </div>
+
         </div>
       </section>
+      <!-- End Artist Card -->
+
+      <!-- <section class="row divider">
+        <svg height="20" width="500">
+          <line x1="0" y1="0" x2="500" y2="0" style="stroke:#2c3030;stroke-width:2" />
+        </svg>
+      </section> -->
 
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>

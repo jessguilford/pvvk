@@ -1,6 +1,13 @@
 @import url(vendor/bootstrap.min.css);
 @import url(vendor/normalize.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400&display=swap");
+@keyframes line-anim {
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent; }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #FFFFFF; } }
 body {
   font-size: 16px; }
 
@@ -91,7 +98,7 @@ a {
 
 p.quote {
   color: #2c3030;
-  font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.3333333333em; }
@@ -104,6 +111,10 @@ p.quote {
 
 section {
   position: relative; }
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0; }
 
 .no-padding-mobile {
   padding-left: 0;
@@ -182,13 +193,6 @@ section {
   animation: line-anim 5s ease forwards 0.75s;
   fill: transparent; }
 
-@keyframes line-anim {
-  50% {
-    stroke-dashoffset: 0;
-    fill: transparent; }
-  100% {
-    stroke-dashoffset: 0;
-    fill: #FFFFFF; } }
 .subnav {
   position: absolute;
   bottom: 0;
@@ -213,27 +217,68 @@ section {
     .artist-card__title h4 {
       margin-bottom: 0; }
   .artist-card__menu {
-    padding: 0 30px; }
+    padding: 30px;
+    position: relative; }
     .artist-card__menu ul {
       list-style: none;
       padding-left: 0; }
     .artist-card__menu li a {
+      font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+      font-size: 1.5rem;
       line-height: 1em;
       display: block;
-      margin-bottom: .5em; }
+      margin-bottom: .5em;
+      transition: .5s; }
+    .artist-card__menu li a:hover {
+      color: #a29d40; }
+    .artist-card__menu li a.selected {
+      color: #a29d40; }
+  .artist-card__menu::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-top: 1px solid #2c3030;
+    border-left: 1px solid #2c3030;
+    position: absolute;
+    top: 0;
+    left: 0; }
   .artist-card__gallery {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px; }
     @media (min-width: 768px) {
       .artist-card__gallery {
-        flex-direction: row; } }
+        flex-flow: row; } }
     .artist-card__gallery figure {
-      height: 300px;
-      width: 300px;
+      height: 250px;
+      width: 250px;
       background-color: #000;
       margin: 10px 0; }
       @media (min-width: 768px) {
         .artist-card__gallery figure {
-          margin: 0 10px; } }
+          margin: 0;
+          flex: 0 1 32%; } }
+  .artist-card__blurb {
+    padding: 30px 0 0;
+    position: relative; }
+    @media (min-width: 768px) {
+      .artist-card__blurb {
+        padding: 70px 0 30px; } }
+  .artist-card__blurb::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-right: 1px solid #2c3030;
+    border-bottom: 1px solid #2c3030;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+
+.divider line {
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  animation: line-anim 5s ease forwards 0.75s; }
 
 /*# sourceMappingURL=main.css.map */

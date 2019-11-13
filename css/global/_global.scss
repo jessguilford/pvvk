@@ -13,6 +13,11 @@ section {
   position: relative;
 }
 
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .no-padding-mobile {
   padding-left: 0;
   padding-right: 0;
@@ -106,17 +111,6 @@ section {
   }
 }
 
-@keyframes line-anim {
-  50% {
-    stroke-dashoffset: 0;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: $white;
-  }
-}
-
 .subnav {
   position: absolute;
   bottom: 0;
@@ -149,7 +143,8 @@ section {
   }
 
   &__menu {
-    padding: 0 30px;
+    padding: 30px;
+    position: relative;
 
     ul {
       list-style: none;
@@ -157,29 +152,78 @@ section {
     }
 
     li a {
+      font-family: $roboto-cd;
+      font-size: rem-calc(24);
+      // line-height: em-calc(32,24);
       line-height: 1em;
       display: block;
       margin-bottom: .5em;
+      transition: .5s;
     }
+
+    li a:hover {
+      color: $ochre;
+    }
+
+    li a.selected {
+      color: $ochre;
+    }
+  }
+
+  &__menu::after {
+    content: "";
+    @include top-left-frame;
   }
 
   &__gallery {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
 
     @include sm {
-      flex-direction: row;
+      flex-flow: row;
     }
 
     figure {
-      height: 300px;
-      width: 300px;
+      height: 250px;
+      width: 250px;
       background-color: #000;
       margin: 10px 0;
 
       @include sm {
-        margin: 0 10px;
+        margin: 0;
+        flex: 0 1 32%;
       }
     }
+  }
+
+  // &__gallery::after {
+  //   content: "";
+  //   @include bottom-right-frame;
+  // }
+
+  &__blurb {
+    padding: 30px 0 0;
+    position: relative;
+
+    @include sm {
+      padding: 70px 0 30px;
+    }
+  }
+
+  &__blurb::after {
+    content: "";
+    @include bottom-right-frame;
+  }
+
+}
+
+.divider {
+  line {
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 500px;
+    animation: line-anim 5s ease forwards 0.75s;
   }
 }

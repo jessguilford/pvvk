@@ -25,6 +25,26 @@
   }
 }
 
+@mixin top-left-frame {
+  width: 50px;
+  height: 50px;
+  border-top: 1px solid $grey;
+  border-left: 1px solid $grey;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin bottom-right-frame {
+  width: 50px;
+  height: 50px;
+  border-right: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 // https://davidwalsh.name/write-media-queries-sass
 @mixin xxs {
   @media (max-width: #{$xss-width}) {

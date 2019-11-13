@@ -7,3 +7,14 @@ $browser-context: 16;
 @function em-calc($pixels, $context) {
   @return #{$pixels/$context}em;
 }
+
+@keyframes line-anim {
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: $white;
+  }
+}
