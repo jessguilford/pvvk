@@ -48,6 +48,7 @@ h4, .h4 {
   color: $grey;
   font-family: $roboto-cd;
   font-weight: 400;
+  text-transform: uppercase;
   font-size: rem-calc(28);
   line-height: em-calc(32,28);
   @include sm {
@@ -94,6 +95,15 @@ p {
   &.xs {
     font-size: rem-calc(12);
     line-height: em-calc(18,12);
+  }
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
   }
 }
 

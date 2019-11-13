@@ -9,6 +9,10 @@
   z-index: 1;
 }
 
+section {
+  position: relative;
+}
+
 .no-padding-mobile {
   padding-left: 0;
   padding-right: 0;
@@ -39,6 +43,11 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.jump {
+  position: absolute;
+  top: 0;
 }
 
 // Hero
@@ -120,5 +129,57 @@
   @include sm {
     flex-direction: row;
     padding: 70px 0;
+  }
+}
+
+// Artist Cards
+.artist-card {
+  padding: 35px 0;
+
+  @include sm {
+    flex-direction: row;
+    padding: 70px 0;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__menu {
+    padding: 0 30px;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li a {
+      line-height: 1em;
+      display: block;
+      margin-bottom: .5em;
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+      flex-direction: row;
+    }
+
+    figure {
+      height: 300px;
+      width: 300px;
+      background-color: #000;
+      margin: 10px 0;
+
+      @include sm {
+        margin: 0 10px;
+      }
+    }
   }
 }
