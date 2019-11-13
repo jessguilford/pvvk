@@ -70,6 +70,44 @@
   }
 }
 
+#logo {
+  path:nth-child(1) {
+    stroke-dasharray: 449.97;
+    stroke-dashoffset: 449.97;
+    animation: line-anim 5s ease-out forwards;
+    fill: transparent;
+  }
+  path:nth-child(2) {
+    stroke-dasharray: 436.8px;
+    stroke-dashoffset: 436.8px;
+    animation: line-anim 5s ease forwards 0.25s;
+    fill: transparent;
+  }
+  path:nth-child(3) {
+    stroke-dasharray: 436.7px;
+    stroke-dashoffset: 436.7px;
+    animation: line-anim 5s ease forwards 0.5s;
+    fill: transparent;
+  }
+  path:nth-child(4) {
+    stroke-dasharray: 509.66;
+    stroke-dashoffset: 509.66;
+    animation: line-anim 5s ease forwards 0.75s;
+    fill: transparent;
+  }
+}
+
+@keyframes line-anim {
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: $white;
+  }
+}
+
 .subnav {
   position: absolute;
   bottom: 0;
