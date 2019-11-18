@@ -18,3 +18,9 @@ $browser-context: 16;
     fill: $white;
   }
 }
+
+@keyframes line-to-right {
+  to {
+    width: 100%;
+  }
+}

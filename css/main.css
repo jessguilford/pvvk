@@ -8,6 +8,9 @@
   100% {
     stroke-dashoffset: 0;
     fill: #FFFFFF; } }
+@keyframes line-to-right {
+  to {
+    width: 100%; } }
 body {
   font-size: 16px; }
 
@@ -175,22 +178,22 @@ section {
 #logo path:nth-child(1) {
   stroke-dasharray: 449.97;
   stroke-dashoffset: 449.97;
-  animation: line-anim 5s ease-out forwards;
+  animation: line-anim 5s ease-out forwards .25s;
   fill: transparent; }
 #logo path:nth-child(2) {
   stroke-dasharray: 436.8px;
   stroke-dashoffset: 436.8px;
-  animation: line-anim 5s ease forwards 0.25s;
+  animation: line-anim 5s ease forwards 0.5s;
   fill: transparent; }
 #logo path:nth-child(3) {
   stroke-dasharray: 436.7px;
   stroke-dashoffset: 436.7px;
-  animation: line-anim 5s ease forwards 0.5s;
+  animation: line-anim 5s ease forwards 0.75s;
   fill: transparent; }
 #logo path:nth-child(4) {
   stroke-dasharray: 509.66;
   stroke-dashoffset: 509.66;
-  animation: line-anim 5s ease forwards 0.75s;
+  animation: line-anim 5s ease forwards 1s;
   fill: transparent; }
 
 .subnav {
@@ -205,6 +208,9 @@ section {
     .subnav {
       flex-direction: row;
       padding: 70px 0; } }
+  .subnav a:hover {
+    color: #2c3030;
+    transition: .5s; }
 
 .artist-card {
   padding: 35px 0; }
@@ -215,7 +221,30 @@ section {
   .artist-card__title {
     margin-bottom: 50px; }
     .artist-card__title h4 {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      padding-top: .25em;
+      display: inline-block;
+      position: relative; }
+    .artist-card__title h4::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0px;
+      height: 8px;
+      background-color: #a29d40;
+      transition: 1s ease-in-out .25s;
+      -webkit-transition: 1s ease-in-out .25s;
+      -moz-transition: 1s ease-in-out .25s;
+      -o-transition: 1s ease-in-out .25s; }
+  .artist-card.active h4::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #a29d40; }
   .artist-card__menu {
     padding: 30px;
     position: relative; }
@@ -265,7 +294,7 @@ section {
     position: relative; }
     @media (min-width: 768px) {
       .artist-card__blurb {
-        padding: 70px 0 30px; } }
+        padding: 50px 0 30px; } }
   .artist-card__blurb::after {
     content: "";
     width: 50px;
@@ -275,10 +304,5 @@ section {
     position: absolute;
     bottom: 0;
     right: 0; }
-
-.divider line {
-  stroke-dasharray: 500px;
-  stroke-dashoffset: 500px;
-  animation: line-anim 5s ease forwards 0.75s; }
 
 /*# sourceMappingURL=main.css.map */
