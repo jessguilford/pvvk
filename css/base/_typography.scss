@@ -112,6 +112,11 @@ p.quote {
   color: $grey;
   font-family: $roboto;
   font-weight: 300;
-  font-size: rem-calc(24);
-  line-height: em-calc(32,24);
+  font-size: rem-calc(18);
+  line-height: em-calc(24,18);
+  
+  @include md {
+    font-size: rem-calc(24);
+    line-height: em-calc(32,24);
+  }
 }

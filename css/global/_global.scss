@@ -133,7 +133,7 @@ section {
 
 // Artist Cards
 .artist-card {
-  padding: 35px 0;
+  padding: 50px 0;
 
   @include sm {
     flex-direction: row;
@@ -145,9 +145,13 @@ section {
 
     h4 {
       margin-bottom: 0;
-      padding-top: .25em;
+      padding-top: .5em;
       display: inline-block;
       position: relative;
+
+      @include sm {
+        padding-top: .25em;
+      }
     }
 
     h4::after {
@@ -188,7 +192,6 @@ section {
     li a {
       font-family: $roboto-cd;
       font-size: rem-calc(24);
-      // line-height: em-calc(32,24);
       line-height: 1em;
       display: block;
       margin-bottom: .5em;
@@ -202,6 +205,20 @@ section {
     li a.selected {
       color: $ochre;
     }
+
+    @include xs {
+      padding: 20px 10px 0;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+
+      li {
+        margin: 0 10px;
+      }
+    }
   }
 
   &__menu::after {
@@ -211,31 +228,38 @@ section {
 
   &__gallery {
     display: flex;
-    flex-direction: column;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding: 30px;
 
-    @include sm {
-      flex-flow: row;
-    }
-
     figure {
-      height: 250px;
-      width: 250px;
       background-color: #000;
-      margin: 10px 0;
+      margin: 5px;
+      flex: 0 1 29%;
 
       @include sm {
-        margin: 0;
-        flex: 0 1 32%;
+        margin: 12px;
+        flex: 0 1 30%;
       }
+    }
+
+    figure:before {
+      content:'';
+      display: table;
+      float:left;
+      padding-top:100%;
     }
 
   }
 
   &__blurb {
-    padding: 30px 0 0;
+    padding: 0 0 30px;
     position: relative;
 
     @include sm {

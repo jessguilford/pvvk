@@ -103,8 +103,12 @@ p.quote {
   color: #2c3030;
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   line-height: 1.3333333333em; }
+  @media (min-width: 992px) {
+    p.quote {
+      font-size: 1.5rem;
+      line-height: 1.3333333333em; } }
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p {
   color: #FFFFFF; }
@@ -213,7 +217,7 @@ section {
     transition: .5s; }
 
 .artist-card {
-  padding: 35px 0; }
+  padding: 50px 0; }
   @media (min-width: 768px) {
     .artist-card {
       flex-direction: row;
@@ -222,9 +226,12 @@ section {
     margin-bottom: 50px; }
     .artist-card__title h4 {
       margin-bottom: 0;
-      padding-top: .25em;
+      padding-top: .5em;
       display: inline-block;
       position: relative; }
+      @media (min-width: 768px) {
+        .artist-card__title h4 {
+          padding-top: .25em; } }
     .artist-card__title h4::after {
       content: "";
       position: absolute;
@@ -262,6 +269,15 @@ section {
       color: #a29d40; }
     .artist-card__menu li a.selected {
       color: #a29d40; }
+    @media (max-width: 767px) {
+      .artist-card__menu {
+        padding: 20px 10px 0; }
+        .artist-card__menu ul {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 0; }
+        .artist-card__menu li {
+          margin: 0 10px; } }
   .artist-card__menu::after {
     content: "";
     width: 50px;
@@ -273,24 +289,30 @@ section {
     left: 0; }
   .artist-card__gallery {
     display: flex;
-    flex-direction: column;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding: 30px; }
-    @media (min-width: 768px) {
-      .artist-card__gallery {
-        flex-flow: row; } }
     .artist-card__gallery figure {
-      height: 250px;
-      width: 250px;
       background-color: #000;
-      margin: 10px 0; }
+      margin: 5px;
+      flex: 0 1 29%; }
       @media (min-width: 768px) {
         .artist-card__gallery figure {
-          margin: 0;
-          flex: 0 1 32%; } }
+          margin: 12px;
+          flex: 0 1 30%; } }
+    .artist-card__gallery figure:before {
+      content: '';
+      display: table;
+      float: left;
+      padding-top: 100%; }
   .artist-card__blurb {
-    padding: 30px 0 0;
+    padding: 0 0 30px;
     position: relative; }
     @media (min-width: 768px) {
       .artist-card__blurb {
