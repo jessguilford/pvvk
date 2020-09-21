@@ -60,7 +60,7 @@ section {
   min-height: 537px;
   position: relative;
   text-align: center;
-  background: $grey url('../images/backgrounds/m/hero-placeholder.jpg');
+  background: $grey url('../images/backgrounds/m/hero-pinochio.jpg');
   background-position: center;
   background-size: cover;
   color: $white;
@@ -78,7 +78,7 @@ section {
 
   @include sm {
     min-height: 755px;
-    background: $grey url('../images/backgrounds/hero-placeholder.jpg');
+    background: $grey url('../images/backgrounds/hero-pinochio.jpg');
     background-position: center;
     background-size: cover;
   }
@@ -238,6 +238,14 @@ section {
     align-items: center;
     padding: 30px;
 
+    .row {
+      align-items: center;
+    }
+
+    a.thumbnail {
+      display: block;
+    }
+
     figure {
       background-color: #000;
       margin: 5px;
@@ -249,11 +257,13 @@ section {
       }
     }
 
-    figure:before {
-      content:'';
-      display: table;
-      float:left;
-      padding-top:100%;
+    .square-grid {
+      figure:before {
+        content:'';
+        display: table;
+        float:left;
+        padding-top:100%;
+      }
     }
 
   }

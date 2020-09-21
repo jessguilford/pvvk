@@ -19,11 +19,11 @@ h1, .h1 {
   font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
   font-size: 2.25rem;
-  line-height: 1.2222222222em; }
+  line-height: 1.22222em; }
   @media (min-width: 768px) {
     h1, .h1 {
       font-size: 4.5rem;
-      line-height: 0.8888888889em; } }
+      line-height: 0.88889em; } }
 
 h2, .h2 {
   color: #2c3030;
@@ -34,7 +34,7 @@ h2, .h2 {
   @media (min-width: 768px) {
     h2, .h2 {
       font-size: 3rem;
-      line-height: 0.6666666667em; } }
+      line-height: 0.66667em; } }
 
 h3, .h3 {
   color: #FFFFFF;
@@ -42,11 +42,11 @@ h3, .h3 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 1.5rem;
-  line-height: 1.1666666667em; }
+  line-height: 1.16667em; }
   @media (min-width: 768px) {
     h3, .h3 {
       font-size: 1.75rem;
-      line-height: 1.1428571429em; } }
+      line-height: 1.14286em; } }
 
 h4, .h4 {
   color: #2c3030;
@@ -54,7 +54,7 @@ h4, .h4 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 1.75rem;
-  line-height: 1.1428571429em; }
+  line-height: 1.14286em; }
   @media (min-width: 768px) {
     h4, .h4 {
       font-size: 2rem;
@@ -78,7 +78,7 @@ h6, .h6 {
   font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 1.3333333333em; }
+  line-height: 1.33333em; }
 
 p {
   color: #2c3030;
@@ -88,7 +88,7 @@ p {
   line-height: 1.5em; }
   p.sm {
     font-size: 0.875rem;
-    line-height: 1.5714285714em; }
+    line-height: 1.57143em; }
   p.xs {
     font-size: 0.75rem;
     line-height: 1.5em; }
@@ -104,11 +104,11 @@ p.quote {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
-  line-height: 1.3333333333em; }
+  line-height: 1.33333em; }
   @media (min-width: 992px) {
     p.quote {
       font-size: 1.5rem;
-      line-height: 1.3333333333em; } }
+      line-height: 1.33333em; } }
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p {
   color: #FFFFFF; }
@@ -159,7 +159,7 @@ section {
   min-height: 537px;
   position: relative;
   text-align: center;
-  background: #2c3030 url("../images/backgrounds/m/hero-placeholder.jpg");
+  background: #2c3030 url("../images/backgrounds/m/hero-pinochio.jpg");
   background-position: center;
   background-size: cover;
   color: #FFFFFF; }
@@ -175,7 +175,7 @@ section {
   @media (min-width: 768px) {
     .hero {
       min-height: 755px;
-      background: #2c3030 url("../images/backgrounds/hero-placeholder.jpg");
+      background: #2c3030 url("../images/backgrounds/hero-pinochio.jpg");
       background-position: center;
       background-size: cover; } }
 
@@ -298,6 +298,10 @@ section {
     flex-wrap: wrap;
     align-items: center;
     padding: 30px; }
+    .artist-card__gallery .row {
+      align-items: center; }
+    .artist-card__gallery a.thumbnail {
+      display: block; }
     .artist-card__gallery figure {
       background-color: #000;
       margin: 5px;
@@ -306,7 +310,7 @@ section {
         .artist-card__gallery figure {
           margin: 12px;
           flex: 0 1 30%; } }
-    .artist-card__gallery figure:before {
+    .artist-card__gallery .square-grid figure:before {
       content: '';
       display: table;
       float: left;
