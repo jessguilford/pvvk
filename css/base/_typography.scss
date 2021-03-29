@@ -107,6 +107,10 @@ a {
   }
 }
 
+p a {
+  color: $ochre;
+}
+
 p.quote {
   // used for large quote callouts
   color: $grey;
@@ -114,7 +118,7 @@ p.quote {
   font-weight: 300;
   font-size: rem-calc(18);
   line-height: em-calc(24,18);
-  
+
   @include md {
     font-size: rem-calc(24);
     line-height: em-calc(32,24);

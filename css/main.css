@@ -99,6 +99,9 @@ a {
     color: inherit;
     text-decoration: none; }
 
+p a {
+  color: #a29d40; }
+
 p.quote {
   color: #2c3030;
   font-family: "Roboto", Arial, sans-serif;
